@@ -1,26 +1,18 @@
 import 'dart:convert';
 
-import 'package:android_contacts_plugin/repository/contacts/models/models.dart';
+import 'package:android_contacts_plugin/models/models.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 
 class ContactsRepository {
-  static const platform =
+  static const _platform =
       MethodChannel('brotherfolnciy.dev/android_contacts_plugin');
-
-  static bool isInitialized = false;
 
   final List<Contact> contacts = [];
 
-  void init() {
-    if (!isInitialized) {
-      isInitialized = true;
-    }
-  }
-
   Future<List<Contact>> getContactsFromPhone() async {
     try {
-      dynamic result = await platform.invokeMethod('getContacts');
+      dynamic result = await _platform.invokeMethod('getContacts');
 
       Map<String, dynamic> valueMap = const JsonCodec().decode(result);
       var contacts = Response.fromJson(valueMap).contacts;

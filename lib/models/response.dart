@@ -1,4 +1,4 @@
-import 'package:android_contacts_plugin/repository/contacts/models/models.dart';
+import 'package:android_contacts_plugin/models/models.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'response.g.dart';

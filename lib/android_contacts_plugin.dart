@@ -1,16 +1,14 @@
 import 'dart:async';
 
-import 'package:android_contacts_plugin/repository/contacts/contacts_repository.dart';
-import 'package:android_contacts_plugin/repository/contacts/models/models.dart';
+import 'package:android_contacts_plugin/models/models.dart';
+import 'package:android_contacts_plugin/src/repository/contacts/contacts_repository.dart';
 
 class AndroidContacts {
-  static final ContactsRepository contactsRepository = ContactsRepository();
+  static final ContactsRepository _contactsRepository = ContactsRepository();
 
-  static void init() {
-    contactsRepository.init();
-  }
+  static bool initialized = false;
 
   static Future<List<Contact>> getContacts() async {
-    return await contactsRepository.getContactsFromPhone();
+    return await _contactsRepository.getContactsFromPhone();
   }
 }

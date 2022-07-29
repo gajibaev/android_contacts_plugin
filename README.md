@@ -1,5 +1,6 @@
 ### What is this?
-android_contacs_plugin is a package for flutter that allows you to read contacts from your phone (only on Android !!!)
+android_contacs_plugin is a package for flutter that allows you to read contacts from your phone  
+(only on Android !!!)
 
   
 ### Stack:

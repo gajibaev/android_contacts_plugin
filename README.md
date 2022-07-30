@@ -12,3 +12,11 @@ I used the kotlin plugin (https://github.com/vestrel00/contacts-android)
 to get contacts from the android platform and sent data to flutter via method channel.
 
 This package helped me to better understand flutter's interaction with OS via method channel.
+
+### Important:
+To get contacts you must use the getContactsFromPhone function in the ContactsRepository.
+
+Contact class contains fields:
+• name - String?
+• phones - List<String>
+• imageBase64 - String?

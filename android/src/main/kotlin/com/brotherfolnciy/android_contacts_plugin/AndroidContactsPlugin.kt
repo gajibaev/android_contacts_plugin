@@ -53,7 +53,6 @@ class AndroidContactsPlugin: FlutterPlugin, MethodCallHandler, ActivityAware {
 
   override fun onAttachedToActivity(binding: ActivityPluginBinding) {
     activity = binding.activity;
-    //activity.onRequestPermissionsResult()
     activity.requestPermissions(arrayOf(Manifest.permission.READ_CONTACTS), 1)
     readContacts()
   }

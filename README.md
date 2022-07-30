@@ -17,6 +17,6 @@ This package helped me to better understand flutter's interaction with OS via me
 To get contacts you must use the getContactsFromPhone function in the ContactsRepository.
 
 Contact class contains fields:  
-• name - String?  
-• phones - List<String>  
-• imageBase64 - String?  
+•  name - String?  
+•  phones - List< String >  
+•  imageBase64 - String?  

@@ -12,3 +12,9 @@ class AndroidContacts {
     return await _contactsRepository.getContactsFromPhone();
   }
 }
+
+
+// TODO Отрефакторить код на kotlin
+// TODO Отрефакторить код на примере 
+// TODO Задокументировать использование пакета и выходные данные
+// TODO Сделать 2 скриншота работы программы и выложить в Git Hub

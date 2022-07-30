@@ -130,20 +130,12 @@ class AndroidContactsPlugin: FlutterPlugin, MethodCallHandler, ActivityAware {
 
     return contactItems
   }
+  
   private fun convert(bitmap: Bitmap): String? {
     val outputStream = ByteArrayOutputStream()
     bitmap.compress(Bitmap.CompressFormat.JPEG, 70, outputStream)
     return Base64.encodeToString(outputStream.toByteArray(), Base64.DEFAULT)
   }
-
-//  override fun onRequestPermissionsResult(
-//    requestCode: Int,
-//    permissions: Array<String?>,
-//    grantResults: IntArray
-//  ) {
-//    super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-//    readContacts()
-//  }
 
   private fun readContacts(): Contacts {
     return Contacts(context)
